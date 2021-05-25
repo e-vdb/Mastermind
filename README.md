@@ -1,8 +1,8 @@
-# Mastermind with graphics user interface (GUI)
+# Mastermind with graphics user interface 
 
 ## Summary
 Mastermind game for one player with two difficulty levels (junior/senior).
-Code written in python3 with GUI using Tkinter.
+Code written in python3 with graphics user interface (GUI) using Tkinter.
 Save all files in the same directory.
 
 ## Mastermind
