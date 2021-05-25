@@ -1,0 +1,31 @@
+Mastermind is a code-breaking game
+
+GAME GOAL
+
+Guess a 4 colors code within 12 attempts
+
+
+
+GAMEPLAY
+
+- A 4 colours code is randomly chosen from 8 colours.
+
+- The same colour can appear several times in the code.
+
+- The user sets a code of 4 colours.
+
+- The code proposal is checked.
+
+- A series of 4 squares is shown.
+
+	* Junior level: the order of squares matches the code order
+
+	* Senior level: the order of squares does not match the code order
+
+	* Square colour meaning
+
+		  ° RED = correct colour and true position
+
+		  ° WHITE = correct colour but false position
+
+
