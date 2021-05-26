@@ -24,9 +24,12 @@ To learn more about Mastermind : https://en.wikipedia.org/wiki/Mastermind_(board
 ![start](https://user-images.githubusercontent.com/82372483/119492387-4f01e880-bd5f-11eb-809b-dfda82e31746.png)
 
 ### Game statistics
+The game statistics are recorded and can be displayed thanks to the menu *Statistics* from the GUI.
+You can reset the statistics with the button *Reset*.
 
 ![stat](https://user-images.githubusercontent.com/82372483/119494581-c20c5e80-bd61-11eb-8e6c-27293eecf3c6.png)
 
 ### Example of game
+Here is an example of game.
 
 ![example](https://user-images.githubusercontent.com/82372483/119493209-42ca5b00-bd60-11eb-82ab-284df72c0188.png)
