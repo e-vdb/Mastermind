@@ -3,10 +3,18 @@
 ## Summary
 Mastermind game for one player with two difficulty levels (junior/senior).
 Code written in python3 with graphics user interface (GUI) using Tkinter.
-Save all files in the same directory.
+
+
+## Repository content
+To play the game : save the following files in the same directory.
+
+* Mastermind_eng.py : Python 3 script
+* rules_eng.txt : plain text document that containes the rules of the game 
+* stat.txt: plain text document used to record game statistics 
 
 ## Mastermind
-Mastermind is a code breaking game.
+Mastermind is a code-breaking game.
+To learn more about Mastermind : https://en.wikipedia.org/wiki/Mastermind_(board_game)
 
 
 ## Tkinter interface
