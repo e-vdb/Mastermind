@@ -2,6 +2,7 @@
 
 ## Summary
 Mastermind game for one player with two difficulty levels (junior/senior).
+
 Code written in python3 with graphics user interface (GUI) using Tkinter.
 
 
