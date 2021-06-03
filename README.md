@@ -15,6 +15,7 @@ To play the game : save the following files in the same directory.
 
 ## Mastermind
 Mastermind is a code-breaking game.
+
 To learn more about Mastermind : https://en.wikipedia.org/wiki/Mastermind_(board_game)
 
 
