@@ -25,6 +25,9 @@ To learn more about Mastermind : https://en.wikipedia.org/wiki/Mastermind_(board
 
 ![start](https://user-images.githubusercontent.com/82372483/119492387-4f01e880-bd5f-11eb-809b-dfda82e31746.png)
 
+### Rules
+The rules of Mastermind can be displayed thanks to the menu *Rules* from the GUI.
+
 ### Game statistics
 The game statistics are recorded and can be displayed thanks to the menu *Statistics* from the GUI.
 You can reset the statistics with the button *Reset*.
