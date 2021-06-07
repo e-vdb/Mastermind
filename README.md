@@ -10,7 +10,7 @@ Code written in python3 with graphics user interface (GUI) using Tkinter.
 To play the game : save the following files in the same directory.
 
 * Mastermind_eng.py : Python 3 script
-* rules_eng.txt : plain text document that containes the rules of the game 
+* rules_eng.txt : plain text document that contains the rules of the game 
 * stat.txt: plain text document used to record game statistics 
 
 ## Mastermind
