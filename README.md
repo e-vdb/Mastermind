@@ -42,4 +42,4 @@ Here is an example of game.
 ![example](https://user-images.githubusercontent.com/82372483/119493209-42ca5b00-bd60-11eb-82ab-284df72c0188.png)
 
 ## Tasks list
-- [ ] Documenting code
+- [ ] Document code
