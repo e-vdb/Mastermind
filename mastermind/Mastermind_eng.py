@@ -12,6 +12,7 @@ Programmation d'un jeu Mastermind en version graphique
 
 import tkinter as tk
 import numpy as np
+from help_functions import about, printRules
 
 ############################################################################
 # Functions
@@ -178,33 +179,14 @@ def exitAll():
         lostNb+=1
         writeStat()
     window.destroy()
-############################################################################
-# Help menu
-############################################################################     
-def printRules():
-    ruleWindow=tk.Toplevel()
-    ruleWindow.title("How to play")
-    with open('../rules_eng.txt') as f:
-        gameRules=f.read()
-    lab_Rule=tk.Label(ruleWindow,text=gameRules,fg="black", anchor="e", justify=tk.LEFT)
-    lab_Rule.pack(side=tk.TOP)
-    ruleWindow.mainloop()
 
 
-def about():
-    aboutWindow=tk.Toplevel()
-    aboutWindow.title("About") 
-    with open('../about.txt') as f:
-        about=f.read()
-    lbl_about=tk.Label(aboutWindow,text=about,fg="black", anchor="e", justify=tk.LEFT)
-    lbl_about.pack(side=tk.TOP)
-    aboutWindow.mainloop()    
 ############################################################################
 # Statistics
 ############################################################################   
 def readStat():
     global playNb,wonNb,lostNb
-    with open('../stat.txt') as f:
+    with open('stat.txt') as f:
         stat=f.readlines()
     playNb=int(stat[0].split()[-1])
     wonNb=int(stat[1].split()[-1])
@@ -217,7 +199,7 @@ def showStat():
     statWindow.title("Statistics")
     frameStat=tk.Canvas(statWindow,bg='white',height=500,width=500)
     frameStat.pack()  
-    with open('../stat.txt') as f:
+    with open('stat.txt') as f:
         stat=f.read()
     lab_Stat=tk.Label(frameStat,text=stat,fg="black")
     lab_Stat.pack(side=tk.TOP)
@@ -226,7 +208,7 @@ def showStat():
     statWindow.mainloop()   
 
 def writeStat():
-    with open('../stat.txt', 'w') as f:
+    with open('stat.txt', 'w') as f:
         f.write('Number of games played\t'+str(playNb)+'\n')
         f.write('Number of games won\t'+str(wonNb)+'\n')
         f.write('Number of games lost\t'+str(lostNb)+'\n')
@@ -237,7 +219,7 @@ def resetStat():
     wonNb=0
     lostNb=0
     writeStat()
-    with open('../stat.txt') as f:
+    with open('stat.txt') as f:
         stat=f.read()
     lab_Stat.configure(text=stat)
     if ongoing:

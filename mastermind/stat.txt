@@ -1,0 +1,3 @@
+Number of games played	7
+Number of games won	7
+Number of games lost	0

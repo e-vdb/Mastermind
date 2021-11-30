@@ -1,5 +1,3 @@
-#!/usr/bin/env python3
-# -*- coding: utf-8 -*-
 """Define help functions for GUI menu."""
 
 import tkinter as tk
@@ -15,6 +13,7 @@ def printRules() -> None:
     None.
     """
     ruleWindow = tk.Toplevel()
+    ruleWindow.resizable(False, False)
     ruleWindow.title("Blackjack rules")
     with open('rules_eng.txt') as f:
         gameRules = f.read()
@@ -22,7 +21,6 @@ def printRules() -> None:
                         fg="black", anchor="e", justify=tk.LEFT)
     lab_Rule.pack(side=tk.TOP)
     ruleWindow.mainloop()
-
 
 def about() -> None:
     """

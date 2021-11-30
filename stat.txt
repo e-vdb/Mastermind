@@ -1,3 +1,0 @@
-Number of games played	6
-Number of games won	6
-Number of games lost	0
