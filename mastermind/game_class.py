@@ -12,3 +12,12 @@ class Game:
     def __init__(self, can, lab_Message):
         self.can = can
         self.lab = lab_Message
+
+    def draw_board(self):
+        for i in range(ROW_COUNT):
+            for j in range(COLUMN_COUNT):
+                self.can.create_oval(10 + WIDTH * j,
+                                     10 + WIDTH * i,
+                                     10 + LENGTH + WIDTH * j,
+                                     10 + LENGTH + WIDTH * i,
+                                     outline='white')
