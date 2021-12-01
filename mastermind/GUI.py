@@ -28,7 +28,7 @@ lab_Message=tk.Label(frame, text="Click on Game to start a new game", fg="black"
 lab_Message.pack(side=tk.TOP)
 
 
-game = Game(can, lab_Message)
+game = Game(can, lab_Message, window)
 
 ############################################################################
 # Menus
@@ -42,7 +42,7 @@ top.add_command(label='Statistics', command=game.stat.show_stat)
 help_menu = tk.Menu(top, tearoff=False)
 top.add_cascade(label='Help', menu=help_menu)
 game_menu.add_command(label='New game', command=game.new_game)
-game_menu.add_command(label='Exit', command=window.destroy)
+game_menu.add_command(label='Exit', command=game.exit_game)
 help_menu.add_command(label='How to play?', command=printRules)
 help_menu.add_command(label='About', command=about)
 ############################################################################
