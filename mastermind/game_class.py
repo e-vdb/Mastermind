@@ -17,6 +17,7 @@ class Game:
         self.window = window
         self.can = can
         self.lab = lab_Message
+        self.cell = [[0 for col in range(COLUMN_COUNT)] for row in range(ROW_COUNT)]
         self.draw_board()
         self.draw_check_board()
         self.ongoing_game = False
@@ -26,11 +27,11 @@ class Game:
         y0= 50
         for i in range(ROW_COUNT):
             for j in range(COLUMN_COUNT):
-                self.can.create_oval(x0 + WIDTH * j,
-                                     y0 + WIDTH * i,
-                                     x0 + LENGTH + WIDTH * j,
-                                     y0 + LENGTH + WIDTH * i,
-                                     outline='white')
+                self.cell[i][j] = self.can.create_oval(x0 + WIDTH * j,
+                                                         y0 + WIDTH * i,
+                                                         x0 + LENGTH + WIDTH * j,
+                                                         y0 + LENGTH + WIDTH * i,
+                                                         outline='white')
 
     def draw_check_board(self):
         x0 = 300
