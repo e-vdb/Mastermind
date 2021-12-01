@@ -24,7 +24,7 @@ can.pack(side=tk.BOTTOM)
 ############################################################################
 # Labels
 ############################################################################
-lab_Message=tk.Label(frame, text="Click on Game to start a new game", fg="black")
+lab_Message=tk.Label(frame, text="Click on Game to start a new game", fg="black", font='Helvetica 14')
 lab_Message.pack(side=tk.TOP)
 
 
