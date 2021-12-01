@@ -16,7 +16,7 @@ frame = tk.Frame(window)
 frame.pack(side=tk.TOP)
 frame2 = tk.Frame(window)
 frame2.pack(side=tk.TOP)
-can = tk.Canvas(window, bg='black', height=500, width=500)
+can = tk.Canvas(window, bg='black', height=800, width=500)
 can.pack(side=tk.BOTTOM)
 
 ############################################################################
