@@ -40,4 +40,6 @@ class Game:
                                           outline='white')
 
     def reinit(self):
-        pass
+        self.can.delete(tk.ALL)
+        self.draw_board()
+        self.draw_check_board()
