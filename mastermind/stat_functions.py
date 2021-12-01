@@ -14,6 +14,7 @@ class Stat:
     def show_stat(self):
         stat_window = tk.Toplevel()
         stat_window.title("Statistics")
+        stat_window.resizable(False, False)
         with open('stat.txt') as f:
             stat = f.read()
         lab_stat = tk.Label(stat_window, text=stat, fg="black", font='Helvetica 12')
