@@ -54,7 +54,7 @@ help_menu.add_command(label='About', command=about)
 
 but_Colors=[]
 for color in colors:
-    but_Colors.append(tk.Button(frame2, bg=color))
+    but_Colors.append(tk.Button(frame2, bg=color, command=lambda x=color: game.fill_disc(x)))
 
 for but in but_Colors:
     but.pack(side=tk.LEFT)
