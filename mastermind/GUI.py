@@ -29,7 +29,7 @@ lab_Message.pack(side=tk.TOP)
 
 
 game = Game(can, lab_Message)
-stat = Stat()
+
 ############################################################################
 # Menus
 ############################################################################
@@ -38,7 +38,7 @@ window.config(menu=top)
 game_menu = tk.Menu(top, tearoff=False)
 top.add_cascade(label='Game', menu=game_menu)
 stat_menu = tk.Menu(top, tearoff=False)
-top.add_command(label='Statistics', command=stat.show_stat)
+top.add_command(label='Statistics', command=game.stat.show_stat)
 help_menu = tk.Menu(top, tearoff=False)
 top.add_cascade(label='Help', menu=help_menu)
 game_menu.add_command(label='Exit', command=window.destroy)
