@@ -12,17 +12,17 @@ class Stat:
         self.lostNb = int(stat[2].split()[-1])
 
     def show_stat(self):
-        stat_window = tk.Toplevel()
-        stat_window.title("Statistics")
-        stat_window.resizable(False, False)
+        self.stat_window = tk.Toplevel()
+        self.stat_window.title("Statistics")
+        self.stat_window.resizable(False, False)
         with open('stat.txt') as f:
             stat = f.read()
-        lab_stat = tk.Label(stat_window, text=stat, fg="black", font='Helvetica 12')
+        lab_stat = tk.Label(self.stat_window, text=stat, fg="black", font='Helvetica 12')
         lab_stat.pack(side=tk.TOP)
-        but_reset = tk.Button(stat_window, text='Reset', fg='white', font='Arial 10',
+        but_reset = tk.Button(self.stat_window, text='Reset', fg='white', font='Arial 10',
                               bg='red', command=self.reset_stat)
         but_reset.pack()
-        stat_window.mainloop()
+        self.stat_window.mainloop()
 
     def write_stat(self):
         with open('stat.txt', 'w') as f:
@@ -35,3 +35,5 @@ class Stat:
         self.wonNb = 0
         self.lostNb = 0
         self.write_stat()
+        self.stat_window.destroy()
+        self.show_stat()
