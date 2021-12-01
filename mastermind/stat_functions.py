@@ -16,7 +16,7 @@ class Stat:
         stat_window.title("Statistics")
         with open('stat.txt') as f:
             stat = f.read()
-        lab_stat = tk.Label(stat_window, text=stat, fg="black")
+        lab_stat = tk.Label(stat_window, text=stat, fg="black", font='Helvetica 12')
         lab_stat.pack(side=tk.TOP)
 
     def write_stat(self):
