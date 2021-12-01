@@ -1,7 +1,7 @@
 """Define class for game."""
 
 from stat_functions import Stat
-
+import tkinter as tk
 
 ROW_COUNT = 12
 COLUMN_COUNT = 4
