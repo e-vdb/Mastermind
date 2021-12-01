@@ -50,5 +50,11 @@ class Game:
         self.draw_check_board()
 
     def new_game(self):
+        if self.ongoing_game:
+            self.stat.lostNb += 1
+        else:
+            self.ongoing_game = True
+        self.stat.write_stat()
+        self.stat.playNb += 1
         self.reinit()
-        self.ongoing_game = True
+
