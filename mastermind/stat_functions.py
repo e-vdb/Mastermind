@@ -10,3 +10,12 @@ class Stat:
         self.playNb = int(stat[0].split()[-1])
         self.wonNb = int(stat[1].split()[-1])
         self.lostNb = int(stat[2].split()[-1])
+
+    def show_stat(self):
+        pass
+
+    def write_stat(self):
+        pass
+
+    def reset_stat(self):
+        pass
