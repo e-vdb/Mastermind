@@ -2,6 +2,7 @@
 
 import tkinter as tk
 from game_class import Game
+from help_functions import printRules, about
 
 colors=["red", "yellow", "blue", "white", "orange", "green", "pink", "purple"]
 
@@ -35,6 +36,11 @@ top = tk.Menu(window)
 window.config(menu=top)
 game_menu = tk.Menu(top, tearoff=False)
 top.add_cascade(label='Game', menu=game_menu)
+help_menu = tk.Menu(top, tearoff=False)
+top.add_cascade(label='Help', menu=help_menu)
+
+help_menu.add_command(label='How to play?', command=printRules)
+help_menu.add_command(label='About', command=about)
 ############################################################################
 # Buttons
 ############################################################################
