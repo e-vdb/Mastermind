@@ -38,7 +38,7 @@ game_menu = tk.Menu(top, tearoff=False)
 top.add_cascade(label='Game', menu=game_menu)
 help_menu = tk.Menu(top, tearoff=False)
 top.add_cascade(label='Help', menu=help_menu)
-
+game_menu.add_command(label='Exit', command=window.destroy)
 help_menu.add_command(label='How to play?', command=printRules)
 help_menu.add_command(label='About', command=about)
 ############################################################################
