@@ -12,8 +12,9 @@ class Game:
     """
     A class to represent a game.
     """
-    def __init__(self, can, lab_Message):
+    def __init__(self, can, lab_Message, window):
         self.stat = Stat()
+        self.window = window
         self.can = can
         self.lab = lab_Message
         self.draw_board()
@@ -58,3 +59,8 @@ class Game:
         self.stat.playNb += 1
         self.reinit()
 
+    def exit_game(self):
+        if self.ongoing_game:
+            self.stat.lostNb += 1
+            self.stat.write_stat()
+        self.window.destroy()
