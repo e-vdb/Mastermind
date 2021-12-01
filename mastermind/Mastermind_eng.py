@@ -255,8 +255,6 @@ submenu.add_command(label='Junior', command=gameJunior)
 submenu.add_command(label='Senior', command=gameSenior)
 jeu.add_command(label='Exit', command=exitAll)
 
-
-
 helpMenu.add_command(label='How to play?',command=printRules)
 helpMenu.add_command(label='About',command=about)
 
