@@ -26,7 +26,15 @@ class Game:
                                      outline='white')
 
     def draw_check_board(self):
-        pass
+        x0 = 200
+        y0 = 50
+        for i in range(ROW_COUNT):
+            for j in range(COLUMN_COUNT):
+                self.can.create_rectangle(x0 + WIDTH * j,
+                                          y0 + WIDTH * i,
+                                          x0 + LENGTH + WIDTH * j,
+                                          y0 + LENGTH + WIDTH * i,
+                                          outline='white')
 
     def reinit(self):
         pass
