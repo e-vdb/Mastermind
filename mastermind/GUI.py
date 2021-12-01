@@ -1,6 +1,7 @@
 """Define GUI."""
 
 import tkinter as tk
+from game_class import Game
 
 colors=["red", "yellow", "blue", "white", "orange", "green", "pink", "purple"]
 
@@ -23,6 +24,9 @@ can.pack(side=tk.BOTTOM)
 ############################################################################
 lab_Message=tk.Label(frame, text="Click on Game to start a new game", fg="black")
 lab_Message.pack(side=tk.TOP)
+
+
+game = Game(can, lab_Message)
 ############################################################################
 # Buttons
 ############################################################################
