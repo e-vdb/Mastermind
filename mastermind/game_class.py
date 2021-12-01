@@ -24,3 +24,6 @@ class Game:
                                      x0 + LENGTH + WIDTH * j,
                                      y0 + LENGTH + WIDTH * i,
                                      outline='white')
+
+    def reinit(self):
+        pass
