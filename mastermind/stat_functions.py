@@ -21,7 +21,10 @@ class Stat:
         lab_stat.pack(side=tk.TOP)
 
     def write_stat(self):
-        pass
+        with open('stat.txt', 'w') as f:
+            f.write('Number of games played\t' + str(self.playNb) + '\n')
+            f.write('Number of games won\t' + str(self.wonNb) + '\n')
+            f.write('Number of games lost\t' + str(self.lostNb) + '\n')
 
     def reset_stat(self):
         pass
