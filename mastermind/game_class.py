@@ -1,7 +1,7 @@
 """Define class for game."""
 
-ROW_COUNT = 6
-COLUMN_COUNT = 7
+ROW_COUNT = 12
+COLUMN_COUNT = 4
 WIDTH = 50
 LENGTH = 40
 
