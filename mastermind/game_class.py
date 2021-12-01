@@ -13,6 +13,7 @@ class Game:
         self.can = can
         self.lab = lab_Message
         self.draw_board()
+        self.draw_check_board()
 
     def draw_board(self):
         x0 = 150
