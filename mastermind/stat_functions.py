@@ -12,7 +12,12 @@ class Stat:
         self.lostNb = int(stat[2].split()[-1])
 
     def show_stat(self):
-        pass
+        stat_window = tk.Toplevel()
+        stat_window.title("Statistics")
+        with open('stat.txt') as f:
+            stat = f.read()
+        lab_stat = tk.Label(text=stat, fg="black")
+        lab_stat.pack(side=tk.TOP)
 
     def write_stat(self):
         pass
