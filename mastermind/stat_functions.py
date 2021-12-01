@@ -19,6 +19,10 @@ class Stat:
             stat = f.read()
         lab_stat = tk.Label(stat_window, text=stat, fg="black", font='Helvetica 12')
         lab_stat.pack(side=tk.TOP)
+        but_reset = tk.Button(stat_window, text='Reset', fg='white', font='Arial 10',
+                              bg='red', command=self.reset_stat)
+        but_reset.pack()
+        stat_window.mainloop()
 
     def write_stat(self):
         with open('stat.txt', 'w') as f:
