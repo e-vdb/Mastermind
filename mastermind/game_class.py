@@ -12,6 +12,7 @@ class Game:
     def __init__(self, can, lab_Message):
         self.can = can
         self.lab = lab_Message
+        self.draw_board()
 
     def draw_board(self):
         for i in range(ROW_COUNT):
