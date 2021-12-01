@@ -15,10 +15,12 @@ class Game:
         self.draw_board()
 
     def draw_board(self):
+        x0 = 150
+        y0= 50
         for i in range(ROW_COUNT):
             for j in range(COLUMN_COUNT):
-                self.can.create_oval(10 + WIDTH * j,
-                                     10 + WIDTH * i,
-                                     10 + LENGTH + WIDTH * j,
-                                     10 + LENGTH + WIDTH * i,
+                self.can.create_oval(x0 + WIDTH * j,
+                                     y0 + WIDTH * i,
+                                     x0 + LENGTH + WIDTH * j,
+                                     y0 + LENGTH + WIDTH * i,
                                      outline='white')
