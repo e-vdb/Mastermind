@@ -27,4 +27,7 @@ class Stat:
             f.write('Number of games lost\t' + str(self.lostNb) + '\n')
 
     def reset_stat(self):
-        pass
+        self.playNb = 0
+        self.wonNb = 0
+        self.lostNb = 0
+        self.write_stat()
