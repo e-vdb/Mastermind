@@ -64,3 +64,17 @@ class Game:
             self.stat.lostNb += 1
             self.stat.write_stat()
         self.window.destroy()
+
+    def game_senior(self):
+        """
+        Launches game with senior difficulty level.
+        """
+        self.level = 'senior'
+        self.new_game()
+
+    def game_junior(self):
+        """
+        Launches game with junior difficulty level.
+        """
+        self.level = 'junior'
+        self.new_game()
