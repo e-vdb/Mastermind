@@ -25,5 +25,8 @@ class Game:
                                      y0 + LENGTH + WIDTH * i,
                                      outline='white')
 
+    def draw_check_board(self):
+        pass
+
     def reinit(self):
         pass
