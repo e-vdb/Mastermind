@@ -48,3 +48,7 @@ class Game:
         self.can.delete(tk.ALL)
         self.draw_board()
         self.draw_check_board()
+
+    def new_game(self):
+        self.reinit()
+        self.ongoing_game = True
