@@ -1,5 +1,8 @@
 """Define class for game."""
 
+from stat_functions import Stat
+
+
 ROW_COUNT = 12
 COLUMN_COUNT = 4
 WIDTH = 50
@@ -10,10 +13,12 @@ class Game:
     A class to represent a game.
     """
     def __init__(self, can, lab_Message):
+        self.stat = Stat()
         self.can = can
         self.lab = lab_Message
         self.draw_board()
         self.draw_check_board()
+        self.ongoing_game = False
 
     def draw_board(self):
         x0 = 70
