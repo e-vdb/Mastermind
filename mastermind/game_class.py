@@ -46,6 +46,9 @@ class Game:
                                           y0 + length + width * i,
                                           outline='white')
 
+    def fill_disc(self, color):
+        self.can.itemconfig(self.cell[0][0], fill=color)
+
     def reinit(self):
         self.can.delete(tk.ALL)
         self.draw_board()
