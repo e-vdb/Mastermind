@@ -51,8 +51,10 @@ class Game:
                                           outline='white')
 
     def fill_disc(self, color):
-        if self.ongoing_game:
-            self.can.itemconfig(self.cell[0][0], fill=color)
+        col = len(self.player.proposal)
+        if self.ongoing_game and col < COLUMN_COUNT:
+            self.can.itemconfig(self.cell[self.player.attempt][col], fill=color)
+            self.player.proposal.append(color)
 
     def show_solution(self):
         for col, color in enumerate(self.mastermind.code):
