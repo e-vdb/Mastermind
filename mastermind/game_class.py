@@ -2,7 +2,7 @@
 
 from stat_functions import Stat
 import tkinter as tk
-from mastermind_class import Mastermind
+from mastermind_class import Mastermind, Player
 
 ROW_COUNT = 12
 COLUMN_COUNT = 4
@@ -16,6 +16,7 @@ class Game:
     def __init__(self, can, lab_Message, window):
         self.stat = Stat()
         self.mastermind = Mastermind()
+        self.player = Player()
         self.window = window
         self.can = can
         self.lab = lab_Message
@@ -50,7 +51,8 @@ class Game:
                                           outline='white')
 
     def fill_disc(self, color):
-        self.can.itemconfig(self.cell[0][0], fill=color)
+        if self.ongoing_game:
+            self.can.itemconfig(self.cell[0][0], fill=color)
 
     def show_solution(self):
         for col, color in enumerate(self.mastermind.code):
