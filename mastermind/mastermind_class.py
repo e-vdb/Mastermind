@@ -37,3 +37,8 @@ class Mastermind():
             else:
                 dicOccurence[color] = 1
         return dicOccurence
+
+
+class Player:
+    def __init__(self):
+        pass
