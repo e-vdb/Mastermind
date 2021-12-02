@@ -11,7 +11,7 @@ class Mastermind():
 
     """
     def __init__(self):
-        pass
+        self.setup_combination()
 
     def setup_combination(self):
         """
@@ -21,7 +21,7 @@ class Mastermind():
         randomly chosen from the "colors" list.
 
         """
-        return np.random.choice(colors, size=4)
+        self.code = np.random.choice(colors, size=4)
 
     def occurenceColors(self, comb):
         """
