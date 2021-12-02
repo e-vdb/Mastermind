@@ -49,6 +49,9 @@ class Game:
     def fill_disc(self, color):
         self.can.itemconfig(self.cell[0][0], fill=color)
 
+    def show_solution(self):
+        pass
+
     def reinit(self):
         self.can.delete(tk.ALL)
         self.draw_board()
