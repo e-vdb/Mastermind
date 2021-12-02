@@ -15,6 +15,7 @@ class Game:
     """
     def __init__(self, can, lab_Message, window):
         self.stat = Stat()
+        self.mastermind = Mastermind()
         self.window = window
         self.can = can
         self.lab = lab_Message
@@ -22,7 +23,6 @@ class Game:
         self.draw_board()
         self.draw_check_board()
         self.ongoing_game = False
-        self.show_solution()
 
     def draw_board(self):
         x0 = 70
@@ -40,6 +40,7 @@ class Game:
         y0 = 60
         width = 50
         length = 15
+        self.can.create_rectangle(70, 650, 260, 650 + LENGTH, outline="white")
         for i in range(ROW_COUNT):
             for j in range(COLUMN_COUNT):
                 self.can.create_rectangle(x0 + width * j,
@@ -52,7 +53,6 @@ class Game:
         self.can.itemconfig(self.cell[0][0], fill=color)
 
     def show_solution(self):
-        self.can.create_rectangle(70, 650, 260, 650 + LENGTH, outline="white")
         for col, color in enumerate(self.mastermind.code):
             self.can.itemconfig(self.cell[ROW_COUNT][col], fill=color)
 
@@ -69,6 +69,7 @@ class Game:
         self.stat.write_stat()
         self.stat.playNb += 1
         self.reinit()
+        self.mastermind.setup_combination()
 
     def exit_game(self):
         if self.ongoing_game:
