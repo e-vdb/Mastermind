@@ -2,6 +2,7 @@
 
 from stat_functions import Stat
 import tkinter as tk
+from mastermind_class import Mastermind
 
 ROW_COUNT = 12
 COLUMN_COUNT = 4
@@ -17,15 +18,16 @@ class Game:
         self.window = window
         self.can = can
         self.lab = lab_Message
-        self.cell = [[0 for col in range(COLUMN_COUNT)] for row in range(ROW_COUNT)]
+        self.cell = [[0 for col in range(COLUMN_COUNT)] for row in range(ROW_COUNT + 1)]
         self.draw_board()
         self.draw_check_board()
         self.ongoing_game = False
+        self.show_solution()
 
     def draw_board(self):
         x0 = 70
         y0= 50
-        for i in range(ROW_COUNT):
+        for i in range(ROW_COUNT +1):
             for j in range(COLUMN_COUNT):
                 self.cell[i][j] = self.can.create_oval(x0 + WIDTH * j,
                                                          y0 + WIDTH * i,
@@ -50,7 +52,9 @@ class Game:
         self.can.itemconfig(self.cell[0][0], fill=color)
 
     def show_solution(self):
-        pass
+        self.can.create_rectangle(70, 650, 260, 650 + LENGTH, outline="white")
+        for col, color in enumerate(self.mastermind.code):
+            self.can.itemconfig(self.cell[ROW_COUNT][col], fill=color)
 
     def reinit(self):
         self.can.delete(tk.ALL)
