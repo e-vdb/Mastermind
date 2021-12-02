@@ -50,22 +50,50 @@ class Game:
                                           y0 + length + width * i,
                                           outline='white')
 
-    def fill_disc(self, color):
+    def fill_disc(self, color) -> None:
+        """
+        Displays the color chosen by the player.
+
+        Returns
+        ------------
+        None
+        """
         col = len(self.player.proposal)
         if self.ongoing_game and col < COLUMN_COUNT:
             self.can.itemconfig(self.cell[self.player.attempt][col], fill=color)
             self.player.proposal.append(color)
 
-    def show_solution(self):
+    def show_solution(self) -> None:
+        """
+        Displays the mastermind code.
+
+        Returns
+        ------------
+        None
+        """
         for col, color in enumerate(self.mastermind.code):
             self.can.itemconfig(self.cell[ROW_COUNT][col], fill=color)
 
-    def reinit(self):
+    def reinit(self) -> None:
+        """
+        Erases all elements in canvas and redraws board game.
+
+        Returns
+        ------------
+        None
+        """
         self.can.delete(tk.ALL)
         self.draw_board()
         self.draw_check_board()
 
-    def new_game(self):
+    def new_game(self) -> None:
+        """
+        Launches a new game.
+
+        Returns
+        ------------
+        None
+        """
         if self.ongoing_game:
             self.stat.lostNb += 1
         else:
@@ -75,22 +103,37 @@ class Game:
         self.reinit()
         self.mastermind.setup_combination()
 
-    def exit_game(self):
+    def exit_game(self) -> None:
+        """
+        Updates game statistics and closes window.
+
+        Returns
+        ------------
+        None
+        """
         if self.ongoing_game:
             self.stat.lostNb += 1
             self.stat.write_stat()
         self.window.destroy()
 
-    def game_senior(self):
+    def game_senior(self) -> None:
         """
         Launches game with senior difficulty level.
+
+        Returns
+        ------------
+        None
         """
         self.level = 'senior'
         self.new_game()
 
-    def game_junior(self):
+    def game_junior(self) -> None:
         """
         Launches game with junior difficulty level.
+
+        Returns
+        ------------
+        None
         """
         self.level = 'junior'
         self.new_game()
