@@ -41,4 +41,9 @@ class Mastermind():
 
 class Player:
     def __init__(self):
-        pass
+        self.attempt = 0
+        self.proposal = []
+
+    def reinit(self):
+        self.attempt = 0
+        self.proposal = []
