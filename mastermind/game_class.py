@@ -87,7 +87,10 @@ class Game:
         if self.ongoing_game and len(self.player.proposal) == 4:
             self.check()
             self.player.validate_proposal()
-
+            if self.player.attempt == ROW_COUNT and not self.player.win:
+                self.lab.configure(text=instructions[4])
+                self.ongoing_game = False
+                self.show_solution()
 
     def erase(self):
         if self.ongoing_game:
@@ -126,6 +129,9 @@ class Game:
                 self.fill_square(count + pionR + pionB, "black")
         if pionR == 4:
             self.ongoing_game = False
+            self.player.win = True
+            self.lab.configure(text=instructions[3])
+
 
     def reinit(self) -> None:
         """
