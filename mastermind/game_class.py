@@ -141,6 +141,7 @@ class Game:
         self.stat.write_stat()
         self.stat.playNb += 1
         self.reinit()
+        self.player.reinit()
         self.mastermind.setup_combination()
 
     def exit_game(self) -> None:
