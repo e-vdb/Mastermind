@@ -64,6 +64,9 @@ class Game:
             self.can.itemconfig(self.cell[self.player.attempt][col], fill=color)
             self.player.proposal.append(color)
 
+    def fill_square(self, col, color) -> None:
+        self.can.itemconfig(self.check_cell[self.player.attempt][col], fill=color)
+
     def show_solution(self) -> None:
         """
         Displays the mastermind code.
