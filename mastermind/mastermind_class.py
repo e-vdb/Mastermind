@@ -47,3 +47,9 @@ class Player:
     def reinit(self):
         self.attempt = 0
         self.proposal = []
+
+    def reset_proposal(self):
+        self.proposal = []
+
+    def validate_proposal(self):
+        self.attempt += 1
