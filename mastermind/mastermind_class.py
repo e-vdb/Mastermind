@@ -53,3 +53,4 @@ class Player:
 
     def validate_proposal(self):
         self.attempt += 1
+        self.proposal =[]
