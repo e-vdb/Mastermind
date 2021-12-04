@@ -60,7 +60,7 @@ class Game:
         None
         """
         col = len(self.player.proposal)
-        if self.ongoing_game and col < COLUMN_COUNT:
+        if self.ongoing_game and col < COLUMN_COUNT and self.player.attempt < ROW_COUNT:
             self.can.itemconfig(self.cell[self.player.attempt][col], fill=color)
             self.player.proposal.append(color)
 
