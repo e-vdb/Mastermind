@@ -52,5 +52,6 @@ class Player:
         self.proposal = []
 
     def validate_proposal(self):
-        self.attempt += 1
-        self.proposal =[]
+        if len(self.proposal) == 4:
+            self.attempt += 1
+            self.proposal =[]
