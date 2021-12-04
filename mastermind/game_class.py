@@ -78,6 +78,12 @@ class Game:
         if self.ongoing_game:
             self.player.validate_proposal()
 
+    def erase(self):
+        if self.ongoing_game:
+            for col in range(COLUMN_COUNT):
+                self.can.itemconfig(self.cell[self.player.attempt][col], fill='black')
+                self.player.reset_proposal()
+
     def reinit(self) -> None:
         """
         Erases all elements in canvas and redraws board game.
