@@ -42,15 +42,17 @@ class Mastermind():
 class Player:
     def __init__(self):
         self.attempt = 0
+        self.win = False
         self.proposal = []
 
     def reinit(self):
         self.attempt = 0
         self.proposal = []
+        self.win = False
 
     def reset_proposal(self):
         self.proposal = []
 
     def validate_proposal(self):
         self.attempt += 1
-        self.proposal =[]
+        self.proposal = []
