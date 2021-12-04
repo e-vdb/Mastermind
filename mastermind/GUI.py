@@ -10,7 +10,6 @@ colors=["red", "yellow", "blue", "white", "orange", "green", "pink", "purple"]
 window = tk.Tk()
 window.title("Mastermind")
 window.resizable(False, False)
-
 ############################################################################
 # Frame
 ############################################################################
@@ -20,7 +19,6 @@ frame2 = tk.Frame(window)
 frame2.pack(side=tk.TOP)
 can = tk.Canvas(window, bg='black', height=800, width=500)
 can.pack(side=tk.BOTTOM)
-
 ############################################################################
 # Labels
 ############################################################################
@@ -51,7 +49,6 @@ help_menu.add_command(label='About', command=about)
 ############################################################################
 # Buttons
 ############################################################################
-
 but_Colors=[]
 for color in colors:
     but_Colors.append(tk.Button(frame2, bg=color, command=lambda x=color: game.fill_disc(x)))
