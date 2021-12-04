@@ -79,14 +79,40 @@ class Game:
             self.can.itemconfig(self.cell[ROW_COUNT][col], fill=color)
 
     def enter(self):
-        if self.ongoing_game:
+        if self.ongoing_game and len(self.player.proposal) == 4:
+            self.check()
             self.player.validate_proposal()
+
 
     def erase(self):
         if self.ongoing_game:
             for col in range(COLUMN_COUNT):
                 self.can.itemconfig(self.cell[self.player.attempt][col], fill='black')
                 self.player.reset_proposal()
+
+    def check(self):
+        pionB = 0
+        pionR = 0
+        pionN = 0
+        colorsCode = self.mastermind.occurenceColors(self.mastermind.code)
+        colorsProp = self.mastermind.occurenceColors(self.player.proposal)
+        for colProp, colCode in zip(self.player.proposal, self.mastermind.code):
+            colorsProp[colProp] -= 1
+            if colProp == colCode:
+                pionR += 1
+                colorsCode[colCode] -= 1
+            elif colProp in colorsCode and colorsCode[colProp] > 0 and colorsProp[colProp] < colorsCode[colProp]:
+                pionB += 1
+                colorsCode[colProp] -= 1
+            else:
+                pionN += 1
+        if self.level == 'senior':
+            for count in range(pionR):
+                self.fill_square(count, "red")
+            for count in range(pionB):
+                self.fill_square(count + pionR, "white")
+            for count in range(pionN):
+                self.fill_square(count + pionR + pionB, "black")
 
     def reinit(self) -> None:
         """
