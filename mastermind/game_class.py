@@ -96,16 +96,22 @@ class Game:
         pionN = 0
         colorsCode = self.mastermind.occurenceColors(self.mastermind.code)
         colorsProp = self.mastermind.occurenceColors(self.player.proposal)
-        for colProp, colCode in zip(self.player.proposal, self.mastermind.code):
+        for count, (colProp, colCode) in enumerate(zip(self.player.proposal, self.mastermind.code)):
             colorsProp[colProp] -= 1
             if colProp == colCode:
                 pionR += 1
                 colorsCode[colCode] -= 1
+                if self.level == 'junior':
+                    self.fill_square(count, 'red')
             elif colProp in colorsCode and colorsCode[colProp] > 0 and colorsProp[colProp] < colorsCode[colProp]:
                 pionB += 1
                 colorsCode[colProp] -= 1
+                if self.level == 'junior':
+                    self.fill_square(count, 'white')
             else:
                 pionN += 1
+                if self.level == 'junior':
+                    self.fill_square(count, 'black')
         if self.level == 'senior':
             for count in range(pionR):
                 self.fill_square(count, "red")
