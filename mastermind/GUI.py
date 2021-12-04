@@ -59,4 +59,6 @@ for color in colors:
 for but in but_Colors:
     but.pack(side=tk.LEFT)
 
+but_enter = tk.Button(frame2, bg='white', text='Enter', command=game.player.validate_proposal)
+but_enter.pack(side=tk.LEFT)
 window.mainloop()
