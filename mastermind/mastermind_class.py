@@ -38,6 +38,8 @@ class Mastermind():
                 dicOccurence[color] = 1
         return dicOccurence
 
+    def check_proposal(self, proposal):
+        pass
 
 class Player:
     def __init__(self):
