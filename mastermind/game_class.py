@@ -8,6 +8,11 @@ ROW_COUNT = 12
 COLUMN_COUNT = 4
 WIDTH = 50
 LENGTH = 40
+instructions = ['Click on Game to start a new game',
+                'Set a combination of 4 colours',
+                'Validation in progress',
+                'CONGRATULATIONS! Click on Game to start a new game',
+                'GAME OVER! Click on Game to start a new game']
 
 class Game:
     """
@@ -133,6 +138,7 @@ class Game:
         self.can.delete(tk.ALL)
         self.draw_board()
         self.draw_check_board()
+        self.lab.configure(text=instructions[0])
 
     def new_game(self) -> None:
         """
@@ -151,6 +157,7 @@ class Game:
         self.reinit()
         self.player.reinit()
         self.mastermind.setup_combination()
+        self.lab.configure(text=instructions[1])
 
     def exit_game(self) -> None:
         """
