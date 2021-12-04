@@ -21,6 +21,7 @@ class Game:
         self.can = can
         self.lab = lab_Message
         self.cell = [[0 for col in range(COLUMN_COUNT)] for row in range(ROW_COUNT + 1)]
+        self.check_cell = [[0 for col in range(COLUMN_COUNT)] for row in range(ROW_COUNT)]
         self.draw_board()
         self.draw_check_board()
         self.ongoing_game = False
@@ -44,7 +45,7 @@ class Game:
         self.can.create_rectangle(70, 650, 260, 650 + LENGTH, outline="white")
         for i in range(ROW_COUNT):
             for j in range(COLUMN_COUNT):
-                self.can.create_rectangle(x0 + width * j,
+                self.check_cell[i][j] = self.can.create_rectangle(x0 + width * j,
                                           y0 + width * i,
                                           x0 + length + width * j,
                                           y0 + length + width * i,
