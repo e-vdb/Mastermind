@@ -61,4 +61,7 @@ for but in but_Colors:
 
 but_enter = tk.Button(frame2, bg='white', text='Enter', command=game.enter)
 but_enter.pack(side=tk.LEFT)
+
+but_erase = tk.Button(frame2, bg='white', text='Erase', command=game.erase)
+but_erase.pack(side=tk.LEFT)
 window.mainloop()
