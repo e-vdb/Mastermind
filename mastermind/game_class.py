@@ -113,6 +113,8 @@ class Game:
                 self.fill_square(count + pionR, "white")
             for count in range(pionN):
                 self.fill_square(count + pionR + pionB, "black")
+        if pionR == 4:
+            self.ongoing_game = False
 
     def reinit(self) -> None:
         """
