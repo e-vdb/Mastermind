@@ -12,6 +12,9 @@ class Mastermind():
     """
     def __init__(self):
         self.setup_combination()
+        self.red = 0
+        self.white = 0
+        self.black = 0
 
     def setup_combination(self):
         """
@@ -38,8 +41,6 @@ class Mastermind():
                 dicOccurence[color] = 1
         return dicOccurence
 
-    def check_proposal(self, proposal):
-        pass
 
 class Player:
     def __init__(self):
