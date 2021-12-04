@@ -74,6 +74,10 @@ class Game:
         for col, color in enumerate(self.mastermind.code):
             self.can.itemconfig(self.cell[ROW_COUNT][col], fill=color)
 
+    def enter(self):
+        if self.ongoing_game:
+            self.player.validate_proposal()
+
     def reinit(self) -> None:
         """
         Erases all elements in canvas and redraws board game.
