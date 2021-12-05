@@ -133,6 +133,9 @@ class Game:
             self.ongoing_game = False
             self.player.win = True
             self.lab.configure(text=instructions[3])
+            self.show_solution()
+            self.stat.wonNb += 1
+            self.stat.write_stat()
 
 
     def reinit(self) -> None:
