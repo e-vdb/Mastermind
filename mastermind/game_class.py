@@ -91,6 +91,8 @@ class Game:
                 self.lab.configure(text=instructions[4])
                 self.ongoing_game = False
                 self.show_solution()
+                self.stat.lostNb += 1
+                self.stat.write_stat()
 
     def erase(self):
         if self.ongoing_game:
